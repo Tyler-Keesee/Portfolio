@@ -513,6 +513,13 @@
     </div>
 
     <script src="main.js"></script>
-    <script src="sw.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js', { scope: './' })
+            .catch(error => console.warn('Offline caching unavailable:', error));
+        });
+      }
+    </script>
   </body>
 </html>
