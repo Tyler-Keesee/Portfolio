@@ -1,14 +1,13 @@
-const CACHE_VERSION = 'v1.0.0';
+const CACHE_VERSION = 'v1.1.0';
 const CACHE_NAME = `portfolio-${CACHE_VERSION}`;
 
 // Resources to cache
 const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/main.js',
-    '/manifest.json',
-    '/offline.html',
+    new URL('./', self.registration.scope).href,
+    new URL('index.html', self.registration.scope).href,
+    new URL('style.css', self.registration.scope).href,
+    new URL('main.js', self.registration.scope).href,
+    new URL('manifest.json', self.registration.scope).href,
     // Add other critical assets
 ];
 
@@ -52,7 +51,7 @@ self.addEventListener('fetch', event => {
             .catch(() => {
                 // Fallback to cache
                 return caches.match(event.request)
-                    .then(response => response || caches.match('/offline.html'));
+                    .then(response => response || caches.match(new URL('index.html', self.registration.scope).href));
             })
     );
 });
