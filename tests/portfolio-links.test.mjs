@@ -26,3 +26,9 @@ test('offline cache uses deploy-relative assets and excludes the missing offline
   assert.match(sw, /self\.registration\.scope/);
   assert.doesNotMatch(sw, /'\/offline\.html'/);
 });
+
+test('featured technologies match the corresponding source repositories', () => {
+  const src = read('main.js');
+  assert.match(src, /title: "Electrical Engineering Platform"[\\s\\S]*?tech: \["JavaScript", "Electrical concepts", "Learning links"\]/);
+  assert.match(src, /title: "PyLearn-IDE"[\\s\\S]*?tech: \["JavaScript", "Brython", "Learning tools"\]/);
+});
