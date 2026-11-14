@@ -16,3 +16,17 @@ jobs:
         with:
           node-version: '22'
       - run: node --test tests/*.test.mjs
+      - name: Render project cards in headless Chrome
+        run: |
+          set -euo pipefail
+          python3 -m http.server 8766 --bind 127.0.0.1 >/tmp/portfolio-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" || true' EXIT
+          sleep 2
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$browser"
+          "$browser" --headless=new --no-sandbox --disable-dev-shm-usage --virtual-time-budget=4500 --dump-dom http://127.0.0.1:8766/index.html > /tmp/portfolio-rendered.html
+          grep -q 'View repository' /tmp/portfolio-rendered.html
+          grep -q 'View archived screenshot' /tmp/portfolio-rendered.html
+          grep -q 'RescuePC Repairs' /tmp/portfolio-rendered.html
+
