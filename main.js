@@ -5,100 +5,106 @@ class Portfolio {
         title: "RescuePC Repairs",
         image: "Projects/RescuePC Repairs/RescuePC_GUI.png",
         tech: ["Instant", "Computer", "Repairs"],
-        url: "https://rescuepc-repairs.github.io/RescuePC-Repair-Toolkit/index.html",
+        url: "https://www.rescuepcrepairs.com/",
+        website: true,
       },
       {
         title: "Recipe Master",
         image: "Projects/Recipe Master/Screenshot 2025-02-14 035417.png",
         tech: ["JavaScript", "Recipe API", "UI/UX Design"],
-        url: "https://rescuepc-repairs.github.io/Recipe-Master/",
+        url: "https://github.com/Tyler-Keesee/Recipe-Master",
       },
       {
         title: "Game Room",
         image: "Projects/Game Room/Screenshot 2025-03-31 001601.png",
         tech: ["JavaScript", "Gaming", "Interactive UI"],
-        url: "https://rescuepc-repairs.github.io/Game-Room/",
+        url: "https://github.com/Tyler-Keesee/Game-Room",
       },
       {
         title: "Billionaire Motivation",
         image:
           "Projects/Billionaire Motivation/Screenshot 2025-01-09 221453.png",
         tech: ["JavaScript", "Motivation", "Content Management"],
-        url: "https://rescuepc-repairs.github.io/Billionaire-Motivation/",
+        url: "Projects/Billionaire Motivation/Screenshot 2025-01-09 221453.png",
+        preview: true,
       },
       {
         title: "Budget Tracking",
         image: "Projects/Budget Tracking/Screenshot 2024-11-26 045410.png",
         tech: ["JavaScript", "Charts.js", "Financial Analytics"],
-        url: "https://rescuepc-repairs.github.io/Budget-Tracking/",
+        url: "https://github.com/Tyler-Keesee/Budget-Tracking",
       },
       {
         title: "Digital Clock",
         image: "Projects/Digital Clock/Screenshot 2025-01-07 123315.png",
         tech: ["JavaScript", "HTML5", "CSS3"],
-        url: "https://rescuepc-repairs.github.io/Digital-Clock/",
+        url: "Projects/Digital Clock/Screenshot 2025-01-07 123315.png",
+        preview: true,
       },
       {
         title: "Donation Link",
         image: "Projects/Donation Link/Screenshot 2025-01-07 123504.png",
         tech: ["React", "Payment Integration", "UI/UX"],
-        url: "https://rescuepc-repairs.github.io/Donation-Link/",
+        url: "https://github.com/Tyler-Keesee/Donation-Link",
       },
       {
         title: "Ecom",
         image: "Projects/Ecom/Screenshot 2025-01-07 123420.png",
         tech: ["React", "JavaScript", "Responsive Design"],
-        url: "https://rescuepc-repairs.github.io/Ecom/",
+        url: "Projects/Ecom/Screenshot 2025-01-07 123420.png",
+        preview: true,
       },
       {
         title: "Electrical Engineering Platform",
         image:
           "Projects/Electrical Engineering Platform/Screenshot 2024-11-13 182047.png",
         tech: ["React", "Engineering", "Educational"],
-        url: "https://rescuepc-repairs.github.io/Electrical-Engineering/",
+        url: "https://github.com/Tyler-Keesee/Electrical-Engineering",
       },
       {
         title: "Habit Flow | Track Your Success",
         image: "Projects/Habit Tracker/Screenshot_11-1-2025_64948_.jpeg",
         tech: ["JavaScript", "Habit Tracking", "Data Visualization"],
-        url: "https://rescuepc-repairs.github.io/Habit-Tracker/",
+        url: "Projects/Habit Tracker/Screenshot_11-1-2025_64948_.jpeg",
+        preview: true,
       },
       {
         title: "Object Detection",
         image: "Projects/Object Detection/Screenshot 2025-01-09 203524.png",
         tech: ["Javascript", "React", "Machine Learning"],
-        url: "https://rescuepc-repairs.github.io/Object-Detection/",
+        url: "https://github.com/Tyler-Keesee/Object-Detection",
       },
       {
         title: "Productivity Booster",
         image: "Projects/Productivity Booster/Screenshot 2025-01-09 204129.png",
         tech: ["React", "Javascript", "Productivity Tools"],
-        url: "https://rescuepc-repairs.github.io/Productivity-Booster/",
+        url: "https://github.com/Tyler-Keesee/Productivity-Booster",
       },
       {
         title: "PyLearn-IDE",
         image: "Projects/PyLearn/Screenshot 2025-01-10 064928.png",
         tech: ["Python", "Educational", "Interactive Learning"],
-        url: "https://rescuepc-repairs.github.io/PyLearn-IDE/",
+        url: "https://github.com/Tyler-Keesee/PyLearn-IDE",
       },
       {
         title: "TypeScript ToDo List",
         image:
           "Projects/Type Script To-Do List/Screenshot 2025-01-09 204231.png",
         tech: ["JavaScript", "React", "State Management"],
-        url: "https://rescuepc-repairs.github.io/TypeScript-ToDo-List/",
+        url: "https://github.com/Tyler-Keesee/TypeScript-ToDo-List",
       },
       {
         title: "Typing Speed Test",
         image: "Projects/Typing Speed Test/Screenshot 2025-01-07 123535.png",
         tech: ["JavaScript", "Performance Metrics", "UI/UX"],
-        url: "https://rescuepc-repairs.github.io/Typing-Speed-Test/",
+        url: "https://github.com/Tyler-Keesee/Typing-Speed-Test",
       },
       {
         title: "Website URLs",
         image: "Projects/Website URLS/Screenshot 2025-01-09 221525.png",
         tech: ["JavaScript", "URL Management", "Web Development"],
-        url: "https://rescuepc-repairs.github.io/Website-URLS/",
+        url: "Projects/Website URLS/Screenshot 2025-01-09 221525.png",
+        preview: true,
       },
     ];
     this.initializePortfolio();
@@ -124,7 +130,7 @@ class Portfolio {
                 <button class="view-project-btn" onclick="window.open('${
                   project.url
                 }', '_blank')">
-                    <span>View Live Project</span>
+                    <span>${project.preview ? 'View archived screenshot' : project.website ? 'Visit product website' : 'View repository'}</span>
                     <i class="fas fa-external-link-alt"></i>
                 </button>
             </div>
