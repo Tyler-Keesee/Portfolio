@@ -4,7 +4,7 @@ class Portfolio {
       {
         title: "RescuePC Repairs",
         image: "Projects/RescuePC Repairs/RescuePC_GUI.png",
-        tech: ["Instant", "Computer", "Repairs"],
+        tech: ["Windows", "PowerShell", "Diagnostics"],
         url: "https://www.rescuepcrepairs.com/",
         website: true,
       },
@@ -58,7 +58,7 @@ class Portfolio {
         title: "Electrical Engineering Platform",
         image:
           "Projects/Electrical Engineering Platform/Screenshot 2024-11-13 182047.png",
-        tech: ["React", "Engineering", "Educational"],
+        tech: ["JavaScript", "Electrical concepts", "Learning links"],
         url: "https://github.com/Tyler-Keesee/Electrical-Engineering",
       },
       {
@@ -83,14 +83,14 @@ class Portfolio {
       {
         title: "PyLearn-IDE",
         image: "Projects/PyLearn/Screenshot 2025-01-10 064928.png",
-        tech: ["Python", "Educational", "Interactive Learning"],
+        tech: ["JavaScript", "Brython", "Learning tools"],
         url: "https://github.com/Tyler-Keesee/PyLearn-IDE",
       },
       {
         title: "TypeScript ToDo List",
         image:
           "Projects/Type Script To-Do List/Screenshot 2025-01-09 204231.png",
-        tech: ["JavaScript", "React", "State Management"],
+        tech: ["TypeScript", "JavaScript", "To-do app"],
         url: "https://github.com/Tyler-Keesee/TypeScript-ToDo-List",
       },
       {

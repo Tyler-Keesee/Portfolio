@@ -1,73 +1,70 @@
-📸 About Me
-Hey, I’m Tyler.
-I’m a tech enthusiast and self taught developer with a passion for scalable architecture, cutting-edge technologies, and digital transformation. Whether building next-gen tools or tackling complex problems, I thrive on creating elegant, efficient solutions that make life easier, smarter, and faster.
+# Software Project Gallery
 
-🔥 Featured Projects
-Each project below reflects a unique challenge solved with modern technologies, clean architecture, and a user-first approach.
+A static, responsive HTML/CSS/JavaScript portfolio presenting selected software projects,
+historical experiments, and screenshots of older builds.
 
-💰 Billionaire Motivation
-Stay inspired with success frameworks and daily billionaire habits.
+**Status:** Maintained gallery, not a guarantee that every linked application is deployed, functional,
+or production-ready. Projects that no longer have a published repository are explicitly labeled
+**View archived screenshot** instead of being presented as live applications.
 
-💳 Budget Tracking App
-Monitor expenses and build financial clarity with intuitive budget management.
+## What it includes
 
-📈 Crypto Price Tracker
-Real-time crypto market data with seamless UI and alert systems.
+- A responsive card-based project gallery rendered from entries in [`main.js`](main.js).
+- Links to the current GitHub account for projects whose repositories are available.
+- Archived local screenshots for older projects without an active public repository.
+- A link to the official RescuePC product site, without exposing its private source code.
+- An installable-web-app experiment with a [manifest](manifest.json) and
+  [service worker](sw.js), including a cached application shell after a successful first visit.
+- Styling and interactions implemented with browser-native JavaScript and CSS.
 
-⏰ Digital Clock
-A stylish, customizable clock built for precision and aesthetic.
+**Note:** Technology tags describe the particular project entries and do not establish
+that every referenced framework or capability is present in this portfolio repository.
 
-🛒 E-commerce Platform
-Full-featured online store for optimized customer journeys.
+## Start locally
 
-🔌 Electrical Engineering Suite
-A hub for engineers with calculators, schematics, and reference tools.
+```bash
+git clone https://github.com/Tyler-Keesee/Portfolio.git
+cd Portfolio
+python -m http.server 8000
+```
 
-🎮 Game Room
-A suite of interactive mini-games for web-based entertainment.
+Open [http://localhost:8000](http://localhost:8000). Do not open the HTML through
+`file://` when evaluating service-worker features.
 
-✅ Habit Tracker
-Build discipline with a tool designed for behavioral reinforcement.
+This gallery does not need API keys or a backend to display its project cards.
+The actual projects linked from the gallery may have their own requirements.
 
-🎯 Object Detection AI
-Machine learning-powered object recognition for intelligent apps.
+## Code and structure
 
-🚀 Productivity Booster
-Optimize workflows with tools that enhance time management.
+| Path | Role |
+| --- | --- |
+| `index.html`, `style.css` | Page structure and layout |
+| `main.js` | Project entries and interactive content |
+| `Projects/` | Historical project screenshots |
+| `manifest.json`, `sw.js` | Web-app metadata and offline-shell caching |
+| `tests/` | Basic static regression checks |
+| `.github/workflows/verify.yml` | Node.js and headless-browser smoke tests |
 
-📝 PyLearn
-A fun and interactive platform to master Python programming.
+## Validation
 
-🍽️ Recipe Master
-Smart recipe suggestions based on ingredients you already have.
+Run the included tests with Node.js 22 or newer:
 
-🛠️ RescuePC Repairs
-Diagnostic suite for IT pros and repair technicians.
+```bash
+node --test tests/*.test.mjs
+```
 
-🗂️ TypeScript To-Do List
-Fast, responsive task manager built with TypeScript and local storage.
+The GitHub Actions workflow also renders the gallery in headless Chrome.
+Passing tests do not prove that every third-party link, old screenshot, or referenced
+application remains available.
 
-⌨️ Typing Speed Test
-Improve efficiency with a fast-paced typing challenge.
+## Privacy and scope
 
-🗂️ Supporting Files
-📄 Resume – My full professional background and experience.
+This is a **public** repository and historically includes personal photograph assets.
+Do not place phone numbers, addresses, financial documents, credentials, or other
+sensitive personal information in public source control. Removing files from the
+current branch does not remove them from Git history.
 
-🌐 Live Project URLs – Explore my apps in action.
+## Connect
 
-⚙️ Manifest & Service Workers – Offline support and performance tools.
-
-🎨 Tech Stack & Tools
-My portfolio is built using:
-
-Core: HTML, CSS, JavaScript, TypeScript, Python
-
-Frameworks: React, Node.js, Express
-
-Tools: Git, VS Code, Firebase, MongoDB, TensorFlow, Docker
-
-DevOps & APIs: RESTful APIs, GitHub Actions, Vercel, Netlify
-
-🌍 Connect With Me
-Let’s build something extraordinary.
-📧 Email: rescuepcrepair@yahoo.com
+For software projects, use the [GitHub repositories page](https://github.com/Tyler-Keesee?tab=repositories).
+For RescuePC product information, visit [RescuePC](https://www.rescuepcrepairs.com/).
